@@ -40,5 +40,5 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# ignore text files
-*.txt
+# ignore notes file
+NOTES.md
