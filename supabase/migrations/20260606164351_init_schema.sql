@@ -1,8 +1,9 @@
 CREATE TABLE IF NOT EXISTS endings (
-    ending_id int PRIMARY KEY,
-    ending_number int,
-    nickname text,
-    audio text
+    ending_id bigint GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    ending_number int NOT NULL,
+    nickname text NOT NULL,
+    audio_path text NOT NULL,
+    info text NOT NULL
 );
 
 ALTER TABLE endings ENABLE ROW LEVEL SECURITY;
