@@ -37,24 +37,30 @@ export type Database = {
       endings: {
         Row: {
           audio_path: string;
+          created_at: string;
+          description: string;
           ending_id: number;
           ending_number: number;
-          info: string;
           nickname: string;
+          updated_at: string;
         };
         Insert: {
           audio_path: string;
+          created_at?: string;
+          description: string;
           ending_id?: never;
           ending_number: number;
-          info: string;
           nickname: string;
+          updated_at?: string;
         };
         Update: {
           audio_path?: string;
+          created_at?: string;
+          description?: string;
           ending_id?: never;
           ending_number?: number;
-          info?: string;
           nickname?: string;
+          updated_at?: string;
         };
         Relationships: [];
       };

@@ -42,7 +42,7 @@ export function EndingCard({
         </CardAction>
       </CardHeader>
       <CardContent>
-        <p>{ending.info}</p>
+        <p>{ending.description}</p>
       </CardContent>
       <CardFooter className="flex flex-row gap-4">
         <Button size="icon" onClick={onTogglePlayback}>
