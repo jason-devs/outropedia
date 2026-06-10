@@ -1,6 +1,5 @@
 import {
   Card,
-  CardAction,
   CardContent,
   CardDescription,
   CardFooter,
@@ -37,9 +36,6 @@ export function EndingCard({
       <CardHeader>
         <CardTitle>Ending #{ending.ending_number}</CardTitle>
         <CardDescription>"{ending.nickname}"</CardDescription>
-        <CardAction>
-          <Button variant="link">open</Button>
-        </CardAction>
       </CardHeader>
       <CardContent>
         <p>{ending.description}</p>

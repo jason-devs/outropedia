@@ -14,7 +14,7 @@ export function InfoBox() {
     supabase.storage.from("audio").getPublicUrl(path).data.publicUrl;
 
   return (
-    <Card className="mx-auto w-full max-w-sm">
+    <Card className="mx-auto w-full">
       <CardContent>
         <Collapsible className="rounded-md data-open:bg-muted">
           <CollapsibleTrigger
