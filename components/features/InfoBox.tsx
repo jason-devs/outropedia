@@ -7,12 +7,13 @@ import {
 } from "@/components/ui/collapsible";
 import { ChevronDownIcon } from "lucide-react";
 import { TypographyP } from "../ui/typographyP";
-import supabase from "@/lib/supabase";
+import { BadEndingCard } from "./BadEndingCard";
 
-export function InfoBox() {
-  const getAudioUrl = (path: string) =>
-    supabase.storage.from("audio").getPublicUrl(path).data.publicUrl;
+type InfoBoxProps = {
+  badAudioUrl: string;
+};
 
+export function InfoBox({ badAudioUrl }: InfoBoxProps) {
   return (
     <Card className="mx-auto w-full">
       <CardContent>
@@ -20,7 +21,7 @@ export function InfoBox() {
           <CollapsibleTrigger
             render={
               <Button variant="ghost" className="w-full">
-                Info
+                About
                 <ChevronDownIcon className="ml-auto group-data-panel-open/button:rotate-180" />
               </Button>
             }
@@ -33,14 +34,8 @@ export function InfoBox() {
               went duh-duh du-dum!", and start saying, it's rock and roll ending
               #5.
             </TypographyP>
-            <TypographyP>
-              Also, so you can avoid ending #101 "the f*** up":
-            </TypographyP>
-            <audio
-              controls
-              src={getAudioUrl("bad.mp3")}
-              className="mt-8 w-full"
-            />
+            <TypographyP>Also, so you can avoid this:</TypographyP>
+            <BadEndingCard badAudioUrl={badAudioUrl} />
           </CollapsibleContent>
         </Collapsible>
       </CardContent>

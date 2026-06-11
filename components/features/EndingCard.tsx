@@ -41,7 +41,7 @@ export function EndingCard({
         <p>{ending.description}</p>
       </CardContent>
       <CardFooter className="flex flex-row gap-4">
-        <Button size="icon" onClick={onTogglePlayback}>
+        <Button variant="ghost" size="icon" onClick={onTogglePlayback}>
           {isLoading ? (
             <Loader2 className="animate-spin" />
           ) : isPlaying ? (
